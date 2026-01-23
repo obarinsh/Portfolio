@@ -1,0 +1,204 @@
+/* Google Fonts - loaded via link tag in HTML for better performance */
+@import "tailwindcss";
+
+/* Theme - Tailwind v4 */
+@theme {
+  /* Colors - Elegant Organic Palette */
+  --color-background: #F5F2EB;
+  --color-foreground: #2C2C2C;
+  
+  --color-primary: #7A8B7A;
+  --color-primary-foreground: #F5F2EB;
+  
+  --color-secondary: #8B9BA3;
+  --color-secondary-foreground: #2C2C2C;
+  
+  --color-accent: #C4A35A;
+  --color-accent-foreground: #2C2C2C;
+  
+  --color-muted: #E8E4DC;
+  --color-muted-foreground: #666666;
+  
+  --color-card: #FAF8F5;
+  --color-card-foreground: #2C2C2C;
+  
+  --color-border: #DDD8CE;
+  --color-input: #DDD8CE;
+  --color-ring: #7A8B7A;
+  
+  --color-destructive: #C45A5A;
+  --color-destructive-foreground: #FFFFFF;
+  
+  --color-success: #5A8B5A;
+  --color-success-foreground: #FFFFFF;
+  
+  --color-warning: #C4A35A;
+  --color-warning-foreground: #2C2C2C;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+
+  /* Shadows - Soft, organic */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-accent: 'Caveat', cursive;
+}
+
+/* Base styles */
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Utility classes for fonts */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  /* Prevent layout shift when scrollbar appears/disappears */
+  scrollbar-gutter: stable;
+}
+
+/* Selection */
+::selection {
+  background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  color: var(--color-foreground);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-muted-foreground) 30%, transparent);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--color-muted-foreground) 50%, transparent);
+}
+
+/* Color utility classes */
+.bg-background { background-color: var(--color-background); }
+.bg-foreground { background-color: var(--color-foreground); }
+.bg-primary { background-color: var(--color-primary); }
+.bg-primary-foreground { background-color: var(--color-primary-foreground); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-secondary-foreground { background-color: var(--color-secondary-foreground); }
+.bg-accent { background-color: var(--color-accent); }
+.bg-accent-foreground { background-color: var(--color-accent-foreground); }
+.bg-muted { background-color: var(--color-muted); }
+.bg-muted-foreground { background-color: var(--color-muted-foreground); }
+.bg-card { background-color: var(--color-card); }
+.bg-card-foreground { background-color: var(--color-card-foreground); }
+.bg-destructive { background-color: var(--color-destructive); }
+.bg-destructive-foreground { background-color: var(--color-destructive-foreground); }
+.bg-success { background-color: var(--color-success); }
+.bg-success-foreground { background-color: var(--color-success-foreground); }
+.bg-warning { background-color: var(--color-warning); }
+.bg-warning-foreground { background-color: var(--color-warning-foreground); }
+.bg-border { background-color: var(--color-border); }
+.bg-input { background-color: var(--color-input); }
+.bg-ring { background-color: var(--color-ring); }
+
+.text-background { color: var(--color-background); }
+.text-foreground { color: var(--color-foreground); }
+.text-primary { color: var(--color-primary); }
+.text-primary-foreground { color: var(--color-primary-foreground); }
+.text-secondary { color: var(--color-secondary); }
+.text-secondary-foreground { color: var(--color-secondary-foreground); }
+.text-accent { color: var(--color-accent); }
+.text-accent-foreground { color: var(--color-accent-foreground); }
+.text-muted { color: var(--color-muted); }
+.text-muted-foreground { color: var(--color-muted-foreground); }
+.text-card { color: var(--color-card); }
+.text-card-foreground { color: var(--color-card-foreground); }
+.text-destructive { color: var(--color-destructive); }
+.text-destructive-foreground { color: var(--color-destructive-foreground); }
+.text-success { color: var(--color-success); }
+.text-success-foreground { color: var(--color-success-foreground); }
+.text-warning { color: var(--color-warning); }
+.text-warning-foreground { color: var(--color-warning-foreground); }
+.text-border { color: var(--color-border); }
+.text-input { color: var(--color-input); }
+.text-ring { color: var(--color-ring); }
+
+.border-background { border-color: var(--color-background); }
+.border-foreground { border-color: var(--color-foreground); }
+.border-primary { border-color: var(--color-primary); }
+.border-secondary { border-color: var(--color-secondary); }
+.border-accent { border-color: var(--color-accent); }
+.border-muted { border-color: var(--color-muted); }
+.border-card { border-color: var(--color-card); }
+.border-destructive { border-color: var(--color-destructive); }
+.border-success { border-color: var(--color-success); }
+.border-warning { border-color: var(--color-warning); }
+.border-border { border-color: var(--color-border); }
+.border-input { border-color: var(--color-input); }
+.border-ring { border-color: var(--color-ring); }
+
+/* Ring color */
+.ring-ring { --tw-ring-color: var(--color-ring); }
+.ring-primary { --tw-ring-color: var(--color-primary); }
+.ring-accent { --tw-ring-color: var(--color-accent); }
+
+/* Shadow utilities */
+.shadow-soft { box-shadow: var(--shadow-md); }
+.shadow-soft-lg { box-shadow: var(--shadow-lg); }
+.shadow-soft-xl { box-shadow: var(--shadow-xl); }

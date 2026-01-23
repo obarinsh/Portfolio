@@ -1,0 +1,16 @@
+{
+  "navItems": [
+    { "label": "Projects", "href": "#projects" },
+    { "label": "About", "href": "#about" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "logo": {
+    "text": "Portfolio",
+    "href": "/"
+  },
+  "brandTool": {
+    "label": "Brand Tool",
+    "href": "/brand-generator",
+    "visible": false
+  }
+}
