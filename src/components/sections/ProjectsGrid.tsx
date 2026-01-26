@@ -70,29 +70,45 @@ export function ProjectsGrid() {
               >
                 {/* Image / Placeholder */}
                 <div
-                  className={`relative aspect-[4/3] lg:aspect-[16/10] rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-primary/10 ${
+                  className={`relative ${
                     index % 2 === 1 ? 'lg:order-2' : ''
                   }`}
                 >
                   {project.image || project.gif ? (
-                    /* Project Image with optional GIF on hover */
-                    <>
-                      <img
-                        src={project.image || project.gif}
-                        alt={project.title}
-                        className={`w-full h-full object-cover object-left-top ${project.gif ? 'group-hover:opacity-0' : ''} transition-opacity duration-300`}
-                      />
-                      {project.gif && (
+                    /* Project Image with browser window frame */
+                    <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-lg">
+                      {/* Browser window header */}
+                      <div className="flex items-center gap-2 px-4 py-3 bg-muted/50 border-b border-border">
+                        <div className="flex gap-1.5">
+                          <span className="w-3 h-3 rounded-full bg-destructive/60"></span>
+                          <span className="w-3 h-3 rounded-full bg-warning/60"></span>
+                          <span className="w-3 h-3 rounded-full bg-success/60"></span>
+                        </div>
+                        <div className="flex-1 mx-4">
+                          <div className="h-6 bg-background/80 rounded-md border border-border/50 flex items-center px-3">
+                            <span className="text-xs text-muted-foreground truncate">{project.liveUrl || project.title}</span>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Image content */}
+                      <div className="relative aspect-[4/3] lg:aspect-[16/10] bg-gradient-to-br from-muted to-primary/10">
                         <img
-                          src={project.gif}
-                          alt={`${project.title} preview`}
-                          className="absolute inset-0 w-full h-full object-cover object-left-top opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                          src={project.image || project.gif}
+                          alt={project.title}
+                          className={`w-full h-full object-cover object-left-top ${project.gif ? 'group-hover:opacity-0' : ''} transition-opacity duration-300`}
                         />
-                      )}
-                    </>
+                        {project.gif && (
+                          <img
+                            src={project.gif}
+                            alt={`${project.title} preview`}
+                            className="absolute inset-0 w-full h-full object-cover object-left-top opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                          />
+                        )}
+                      </div>
+                    </div>
                   ) : (
                     /* Decorative placeholder */
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="aspect-[4/3] lg:aspect-[16/10] rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-primary/10 flex items-center justify-center">
                       <div className="relative">
                         <motion.div
                           className="w-32 h-32 rounded-full bg-primary/10"
@@ -124,9 +140,12 @@ export function ProjectsGrid() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted-foreground mb-6">
-                    {project.description}
-                  </p>
+                  <div className="text-muted-foreground mb-6 space-y-3">
+                    <p>{project.description}</p>
+                    {project.longDescription && (
+                      <p className="text-sm">{project.longDescription.trim()}</p>
+                    )}
+                  </div>
 
                   {/* Problem & Outcome */}
                   <div className="space-y-4 mb-6">
@@ -154,7 +173,7 @@ export function ProjectsGrid() {
                         className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline underline-offset-4"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        View Live
+                        View site
                       </a>
                     )}
                     {project.githubUrl && (

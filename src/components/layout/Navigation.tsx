@@ -30,9 +30,15 @@ export function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Name */}
-        <Link to="/" className="group">
+        <Link to="/" className="group flex items-center gap-2">
+          <motion.img
+            src="/OB-logo.svg"
+            alt="OB Logo"
+            className="h-4 md:h-5 w-auto"
+            whileHover={{ scale: 1.02 }}
+          />
           <motion.span
             className="text-2xl font-heading font-semibold"
             whileHover={{ scale: 1.02 }}

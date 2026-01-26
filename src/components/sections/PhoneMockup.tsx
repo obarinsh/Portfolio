@@ -277,92 +277,100 @@ export function PhoneMockup() {
 
   return (
     <div className="flex flex-col items-center">
-      {/* iPhone Frame - Smaller size */}
-      <motion.div
-        className="relative"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-      >
-        {/* Glow effect */}
-        <div className="absolute -inset-3 bg-gradient-to-b from-primary/5 to-accent/5 rounded-[40px] blur-xl" />
-        
-        {/* Phone body */}
-        <div className="relative w-[160px] h-[340px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a19] rounded-[32px] p-[6px] shadow-2xl">
-          {/* Metallic edge */}
-          <div className="absolute inset-[2px] rounded-[30px] bg-gradient-to-b from-[#3a3a3a] to-[#1a1a19] p-[1px]">
-            <div className="w-full h-full rounded-[29px] bg-[#0a0a0a]" />
-          </div>
+      {/* Phone with side navigation */}
+      <div className="flex items-center gap-4 md:gap-6">
+        {/* Left arrow */}
+        <motion.button
+          onClick={goToPrevious}
+          className="w-10 h-10 rounded-full border border-border hover:bg-card hover:border-primary/50 transition-all duration-300 flex items-center justify-center group"
+          aria-label="Previous style"
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5 }}
+        >
+          <ChevronLeft className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+        </motion.button>
+
+        {/* iPhone Frame */}
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+        >
+          {/* Glow effect */}
+          <div className="absolute -inset-3 bg-gradient-to-b from-primary/5 to-accent/5 rounded-[40px] blur-xl" />
           
-          {/* Screen */}
-          <div className="relative w-full h-full bg-[#0a0a0a] rounded-[26px] overflow-hidden z-10">
-            {/* Dynamic Island */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-5 bg-[#0a0a0a] rounded-full z-20 flex items-center justify-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-[#1a1a1a] ring-1 ring-[#2a2a2a]" />
-              <div className="w-1 h-1 rounded-full bg-[#2a2a2a]" />
+          {/* Phone body */}
+          <div className="relative w-[160px] h-[340px] bg-gradient-to-b from-[#2a2a2a] to-[#1a1a19] rounded-[32px] p-[6px] shadow-2xl">
+            {/* Metallic edge */}
+            <div className="absolute inset-[2px] rounded-[30px] bg-gradient-to-b from-[#3a3a3a] to-[#1a1a19] p-[1px]">
+              <div className="w-full h-full rounded-[29px] bg-[#0a0a0a]" />
             </div>
+            
+            {/* Screen */}
+            <div className="relative w-full h-full bg-[#0a0a0a] rounded-[26px] overflow-hidden z-10">
+              {/* Dynamic Island */}
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-5 bg-[#0a0a0a] rounded-full z-20 flex items-center justify-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-[#1a1a1a] ring-1 ring-[#2a2a2a]" />
+                <div className="w-1 h-1 rounded-full bg-[#2a2a2a]" />
+              </div>
 
-            {/* Screen content */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentStyle.id}
-                className="absolute inset-0 pt-8"
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.02 }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
-              >
-                {currentStyle.render()}
-              </motion.div>
-            </AnimatePresence>
+              {/* Screen content */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentStyle.id}
+                  className="absolute inset-0 pt-8"
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.02 }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                >
+                  {currentStyle.render()}
+                </motion.div>
+              </AnimatePresence>
 
-            {/* Home indicator */}
-            <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-20 h-1 bg-white/20 rounded-full z-20" />
+              {/* Home indicator */}
+              <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-20 h-1 bg-white/20 rounded-full z-20" />
+            </div>
           </div>
-        </div>
 
-        {/* Side buttons */}
-        <div className="absolute left-[-2px] top-20 w-[2px] h-6 bg-[#2a2a2a] rounded-l-sm" />
-        <div className="absolute left-[-2px] top-28 w-[2px] h-10 bg-[#2a2a2a] rounded-l-sm" />
-        <div className="absolute left-[-2px] top-40 w-[2px] h-10 bg-[#2a2a2a] rounded-l-sm" />
-        <div className="absolute right-[-2px] top-28 w-[2px] h-12 bg-[#2a2a2a] rounded-r-sm" />
-      </motion.div>
+          {/* Side buttons */}
+          <div className="absolute left-[-2px] top-20 w-[2px] h-6 bg-[#2a2a2a] rounded-l-sm" />
+          <div className="absolute left-[-2px] top-28 w-[2px] h-10 bg-[#2a2a2a] rounded-l-sm" />
+          <div className="absolute left-[-2px] top-40 w-[2px] h-10 bg-[#2a2a2a] rounded-l-sm" />
+          <div className="absolute right-[-2px] top-28 w-[2px] h-12 bg-[#2a2a2a] rounded-r-sm" />
+        </motion.div>
 
-      {/* Navigation */}
-      <motion.div
-        className="flex items-center gap-5 mt-6"
+        {/* Right arrow */}
+        <motion.button
+          onClick={goToNext}
+          className="w-10 h-10 rounded-full border border-border hover:bg-card hover:border-primary/50 transition-all duration-300 flex items-center justify-center group"
+          aria-label="Next style"
+          initial={{ opacity: 0, x: 10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5 }}
+        >
+          <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+        </motion.button>
+      </div>
+
+      {/* Style name */}
+      <motion.div 
+        className="text-center mt-4"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
-        <button
-          onClick={goToPrevious}
-          className="w-10 h-10 rounded-full border border-border hover:bg-card hover:border-primary/50 transition-all duration-300 flex items-center justify-center group"
-          aria-label="Previous style"
+        <motion.p 
+          key={currentStyle.name}
+          className="text-base font-heading font-medium"
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <ChevronLeft className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-        </button>
-
-        {/* Style name */}
-        <div className="text-center w-24">
-          <motion.p 
-            key={currentStyle.name}
-            className="text-base font-heading font-medium"
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            {currentStyle.name}
-          </motion.p>
-        </div>
-
-        <button
-          onClick={goToNext}
-          className="w-10 h-10 rounded-full border border-border hover:bg-card hover:border-primary/50 transition-all duration-300 flex items-center justify-center group"
-          aria-label="Next style"
-        >
-          <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-        </button>
+          {currentStyle.name}
+        </motion.p>
       </motion.div>
 
       {/* Progress dots - Compact */}

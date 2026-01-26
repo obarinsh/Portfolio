@@ -9,8 +9,8 @@ const skills = [
   },
   {
     icon: Palette,
-    title: 'Design Systems',
-    description: 'Creating cohesive, scalable component libraries and design tokens.',
+    title: 'UX/UI Design',
+    description: 'Designing intuitive interfaces and interactions that feel clear and intentional.',
   },
   {
     icon: Users,
@@ -19,7 +19,7 @@ const skills = [
   },
   {
     icon: Sparkles,
-    title: 'AI-Native',
+    title: 'AI-Enabled',
     description: 'Embracing coding, vibe coding and AI tools to ship faster and better.',
   },
 ];
@@ -44,22 +44,25 @@ export function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm a Product Engineer who believes the best products come from
-                understanding users deeply and having the technical skills to bring
-                solutions to life quickly.
+                I come from many years in engineering roles, working on complex systems
+                and real-world problems. That background shaped how I think and work:
+                analytically, pragmatically, and with a strong sense of ownership.
               </p>
               <p>
-                My approach combines design thinking with engineering pragmatism. I
-                don't just write code—I solve problems. Whether it's crafting a
-                design system, building an AI-powered feature, or optimizing a user
-                flow, I focus on impact.
+               Along the way, I found myself wondering how things actually worked 
+               behind the scenes.
+               That curiosity led me to study Full-Stack Web Development,
+              to understand how products are built end to end.
               </p>
               <p>
-                I embrace AI-native workflows and "vibe coding" because they let me
-                move faster from idea to implementation. The future of product
-                development is about leveraging every tool available to create
-                better experiences.
+              I realized that writing code alone wasn't what motivated me most. 
+              What truly drives me is understanding users deeply and making thoughtful product decisions.
+              I’m most energized at the intersection of user experience, design thinking, and engineering execution.
               </p>
+
+
+
+              
             </div>
 
             {/* Handwritten accent */}
@@ -70,7 +73,7 @@ export function About() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              "Elegant but fresh, modern and refined"
+              "Elegant, fresh and modern"
             </motion.p>
           </motion.div>
 
