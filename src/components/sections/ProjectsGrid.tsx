@@ -27,8 +27,8 @@ export function ProjectsGrid() {
   const otherProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-24 px-4 sm:px-6 overflow-hidden">
+      <div className="max-w-6xl mx-auto overflow-hidden">
         {/* Section Header */}
         <motion.div
           className="mb-16"
@@ -64,7 +64,7 @@ export function ProjectsGrid() {
               className="group"
             >
               <div
-                className={`grid lg:grid-cols-2 gap-8 p-8 rounded-3xl border border-border bg-card hover:shadow-xl transition-all duration-300 ${
+                className={`grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 p-3 sm:p-5 lg:p-8 rounded-2xl lg:rounded-3xl border border-border bg-card hover:shadow-xl transition-all duration-300 overflow-hidden ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
               >
@@ -76,17 +76,17 @@ export function ProjectsGrid() {
                 >
                   {project.image || project.gif ? (
                     /* Project Image with browser window frame */
-                    <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-lg">
+                    <div className="rounded-xl lg:rounded-2xl border border-border bg-card overflow-hidden shadow-lg w-full">
                       {/* Browser window header */}
-                      <div className="flex items-center gap-2 px-4 py-3 bg-muted/50 border-b border-border">
-                        <div className="flex gap-1.5">
-                          <span className="w-3 h-3 rounded-full bg-destructive/60"></span>
-                          <span className="w-3 h-3 rounded-full bg-warning/60"></span>
-                          <span className="w-3 h-3 rounded-full bg-success/60"></span>
+                      <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-4 py-2 sm:py-3 bg-muted/50 border-b border-border">
+                        <div className="flex gap-1 sm:gap-1.5 shrink-0">
+                          <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-destructive/60"></span>
+                          <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-warning/60"></span>
+                          <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-success/60"></span>
                         </div>
-                        <div className="flex-1 mx-4">
-                          <div className="h-6 bg-background/80 rounded-md border border-border/50 flex items-center px-3">
-                            <span className="text-xs text-muted-foreground truncate">{project.liveUrl || project.title}</span>
+                        <div className="flex-1 min-w-0 mx-1 sm:mx-4">
+                          <div className="h-5 sm:h-6 bg-background/80 rounded-md border border-border/50 flex items-center px-2 overflow-hidden">
+                            <span className="text-[9px] sm:text-xs text-muted-foreground truncate">{project.liveUrl || project.title}</span>
                           </div>
                         </div>
                       </div>
