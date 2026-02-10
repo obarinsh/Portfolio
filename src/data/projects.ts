@@ -17,6 +17,20 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'project-1',
+    title: 'LaLúz',
+    description: 'Plan beautifully, travel freely. Enter a destination, get curated recommendations, and drag-and-drop to build your perfect day-by-day itinerary.',
+    image: '/laluz.png',
+    gif: '/gifs/laluz.gif',
+    longDescription: '',
+    problem: 'Planning a trip often means juggling multiple tabs, spreadsheets, and apps. Travelers need a simple way to organize destinations into a cohesive itinerary.',
+    approach: '',
+    outcome: 'Built a clean, intuitive travel planning experience where users can search destinations, explore curated recommendations, and visually build their trip day by day.',
+    tags: ['UX/UI Design', 'User Flow', 'Code'],
+    liveUrl: 'https://to-travel-henna.vercel.app/',
+    featured: true,
+  },
+  {
+    id: 'project-2',
     title: 'Cardersation',
     description: 'Cardersation transforms quality time into meaningful moments. One phone, one deck, endless conversations. Users choose from curated themed decks, swipe through thought-provoking questions, and discover new sides of the people they love.',
     image: '/cardersation_static.png',
@@ -30,7 +44,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 'project-2',
+    id: 'project-3',
     title: 'FairShot',
     description: 'This project explores how AI can give job seekers clearer, more honest feedback on their CVs.',
     image: '/fairshot.png',
@@ -44,7 +58,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 'project-3',
+    id: 'project-4',
     title: 'Kryora',
     description: 'Kryora puts AI-powered energy savings in the hands of the people who need it daily, facility teams who don\'t have time for complexity.',
     image: '/kryora.png',
