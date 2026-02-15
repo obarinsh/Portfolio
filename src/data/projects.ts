@@ -76,6 +76,7 @@ export const projects: Project[] = [
     title: 'Close Enough',
     description: 'A word game that tests the "illusion of explanatory depth" — the psychological phenomenon where people believe they understand common concepts until they try to explain them.',
     image: '/closeenough.png',
+    gif: '/gifs/ce.gif',
     longDescription: '',
     problem: 'People think they understand everyday words until they try to explain them. This cognitive bias goes unnoticed in daily life.',
     approach: '',
