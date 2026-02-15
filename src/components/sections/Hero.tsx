@@ -48,7 +48,7 @@ export function Hero() {
                 I bridge{' '}
                 <span className="text-foreground font-medium">design</span> and{' '}
                 <span className="text-foreground font-medium">code</span>, solving
-                user problems with AI-native tools and vibe coding.
+                user problems with AI-native tools and coding.
               </motion.p>
 
               {/* Keywords */}

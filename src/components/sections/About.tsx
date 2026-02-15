@@ -20,7 +20,7 @@ const skills = [
   {
     icon: Sparkles,
     title: 'AI-Enabled',
-    description: 'Embracing coding, vibe coding and AI tools to ship faster and better.',
+    description: 'Embracing coding, prompt engineering and AI tools to ship faster and better.',
   },
 ];
 

@@ -71,6 +71,19 @@ export const projects: Project[] = [
     liveUrl: 'https://dashboard.kryora.ai/home',
     featured: true,
   },
+  {
+    id: 'project-5',
+    title: 'Close Enough',
+    description: 'A word game that tests the "illusion of explanatory depth" — the psychological phenomenon where people believe they understand common concepts until they try to explain them.',
+    image: '/closeenough.png',
+    longDescription: '',
+    problem: 'People think they understand everyday words until they try to explain them. This cognitive bias goes unnoticed in daily life.',
+    approach: '',
+    outcome: 'Built a playful AI-powered game where players explain familiar words in their own words and receive encouraging, educational feedback comparing their explanation to the actual definition.',
+    tags: ['UX/UI Design', 'AI Integration', 'Code'],
+    liveUrl: 'https://close-enough.vercel.app/',
+    featured: true,
+  },
 ];
 
 export const socialLinks = {
