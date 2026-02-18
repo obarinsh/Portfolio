@@ -95,13 +95,13 @@ export function ProjectsGrid() {
                         <img
                           src={project.image || project.gif}
                           alt={project.title}
-                          className={`w-full h-full object-cover object-left-top ${project.gif ? 'group-hover:opacity-0' : ''} transition-opacity duration-300`}
+                          className={`w-full h-full object-cover object-center ${project.gif ? 'group-hover:opacity-0' : ''} transition-opacity duration-300`}
                         />
                         {project.gif && (
                           <img
                             src={project.gif}
                             alt={`${project.title} preview`}
-                            className="absolute inset-0 w-full h-full object-cover object-left-top opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            className="absolute inset-0 w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                           />
                         )}
                       </div>
