@@ -85,6 +85,20 @@ export const projects: Project[] = [
     liveUrl: 'https://close-enough.vercel.app/',
     featured: true,
   },
+  {
+    id: 'project-6',
+    title: 'iKi',
+    description: 'An AI-powered self-discovery app that helps people find their Ikigai (reason for being) through guided questions and intelligent analysis.',
+    image: '/iki.png',
+    gif: '/gifs/iki.gif',
+    longDescription: '',
+    problem: 'Many people struggle to find meaningful direction in life, unsure how to connect what they love, what they\'re good at, what the world needs, and what they can be paid for.',
+    approach: '',
+    outcome: 'Built a guided journey through the four pillars of Ikigai with AI-generated personalized insights, career suggestions, and actionable next steps based on user responses.',
+    tags: ['UX/UI Design', 'AI Integration', 'Code'],
+    liveUrl: 'https://iki-ikigai.vercel.app/',
+    featured: true,
+  },
 ];
 
 export const socialLinks = {
