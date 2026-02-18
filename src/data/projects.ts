@@ -40,7 +40,7 @@ export const projects: Project[] = [
     approach: '',
     outcome: 'Built a guided journey through the four pillars of Ikigai with AI-generated personalized insights, career suggestions, and actionable next steps based on user responses.',
     tags: ['UX/UI Design', 'AI Integration', 'Code'],
-    liveUrl: 'https://iki-ikigai.vercel.app/',
+    liveUrl: 'https://iki-two.vercel.app/',
     featured: true,
   },
   {
